@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+PRISM_PROJECT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+PRISM_PYTHON="$PRISM_PROJECT/.venv/bin/python"
+if [ ! -x "$PRISM_PYTHON" ]; then
+    printf '%s\n' 'Missing checkout environment. Run uv sync --locked in the checkout.' >&2
+    exit 1
+fi
+cd "$PRISM_PROJECT"
+exec "$PRISM_PYTHON" -m prism_mcp.server
