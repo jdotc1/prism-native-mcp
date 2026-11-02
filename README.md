@@ -21,6 +21,19 @@ Prism: data table → native analysis and graphs → linked layout → PDF, SVG,
 > compatibility with other versions is not established. The wheel and source
 > archive are Python packages, not standalone macOS applications.
 
+## Visual workflow
+
+Prism performs native calculations and rendering; the local MCP server coordinates supported operations.
+
+```mermaid
+flowchart TB
+  A["MCP client and observations"] --> B["Local stdio server"]
+  B --> C["Native Prism tables"]
+  C --> D["Prism analyses and graphs"]
+  D --> E["Linked editable layout"]
+  E --> F["PDF / SVG / PNG export"]
+```
+
 ## What you can do
 
 | Workflow | Supported scope |
