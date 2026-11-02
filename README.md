@@ -27,11 +27,11 @@ Prism performs native calculations and rendering; the local MCP server coordinat
 
 ```mermaid
 flowchart TB
-  A["MCP client and observations"] --> B["Local stdio server"]
-  B --> C["Native Prism tables"]
-  C --> D["Prism analyses and graphs"]
-  D --> E["Linked editable layout"]
-  E --> F["PDF / SVG / PNG export"]
+  A["MCP client"] --> B["Local server"]
+  B --> C["Prism tables"]
+  C --> D["Prism graphs"]
+  D --> E["Linked layout"]
+  E --> F["Export figure"]
 ```
 
 ## What you can do
